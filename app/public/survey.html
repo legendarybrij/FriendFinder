@@ -160,7 +160,7 @@
     <hr>
     <footer class="footer">
       <div class="container">
-        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a></p>
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/legendarybrij/FriendFinder">GitHub Repo</a></p>
       </div>
     </footer>
 
@@ -189,6 +189,55 @@
   </div>
 
   <script type="text/javascript">
+
+    function compatible(array){
+           // var diff = [];
+            var totalScore =[];
+            var leastValue =100;
+            var compatibleUserIndex=[];
+        $.get("/api/friends",function(data) {
+           
+            for(let i=0;i<data.length-1;i++)
+            {   //diff[i]=data[i];
+               // diff[i].scores[10]=0;
+                totalScore[i]=0;
+                for(let j=0; j<10;j++)
+                {
+                   // diff[i].scores[10]+=Math.abs(data[i].scores[j]-array[j]); 
+                    totalScore[i]+=parseFloat(Math.abs(data[i].scores[j]-array[j])); 
+                }
+                console.log(totalScore[i]);
+            }
+            for(let i=0;i<totalScore.length;i++)
+            {
+            leastValue = Math.min(leastValue,totalScore[i]);
+            }
+
+            for(let i=0; i<totalScore.length; i++)
+            {
+                if(totalScore[i]===leastValue)
+                {
+                    compatibleUserIndex.push(i);
+                }
+            }
+            console.log("Least Value = "+leastValue);
+            if(compatibleUserIndex.length===1)
+            {
+              $("#match-name").text(data[compatibleUserIndex[0]].name);
+              $("#match-img").attr("src", data[compatibleUserIndex[0]].photo);
+              $("#match-img").css({'width':'30vw'});
+            }else{
+                var randomIndex=Math.floor(Math.random() * compatibleUserIndex.length);
+                $("#match-name").text(data[compatibleUserIndex[randomIndex]].name);
+              $("#match-img").attr("src", data[compatibleUserIndex[randomIndex]].photo);
+              $("#match-img").css({'width':'30vw'});
+            }
+            
+
+              
+               
+            });
+    }
     // Chosen CSS
     var config = {
       ".chosen-select": {},
@@ -256,9 +305,7 @@
         $.post("/api/friends", userData, function(data) {
 
           // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-          $("#match-name").text(data.name);
-          $("#match-img").attr("src", data.photo);
-
+          compatible(userData.scores);
           // Show the modal with the best match
           $("#results-modal").modal("toggle");
 
