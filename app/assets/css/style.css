@@ -1,0 +1,24 @@
+html, body, .jumbotron {
+    background: url(../images/friends.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h2, .api, h3, h4 {
+    color: #fd5c4a;
+    font-weight: bold;
+}
+
+#mainTitle {
+    color: rgb(47, 103, 207);
+}
+
+#nextPage {
+    color: rgb(47, 103, 207);
+}
+
+.btn {
+    background-color: rgb(47, 103, 207);
+}
