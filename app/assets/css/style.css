@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
 html, body, .jumbotron {
     background: url(../images/friends.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -6,19 +8,33 @@ html, body, .jumbotron {
     background-size: cover;
 }
 
-h2, .api, h3, h4 {
-    color: #fd5c4a;
+h2, h3, h4, .api {
+    color: #fefd93;
     font-weight: bold;
+    text-shadow: 0 0 5px #c7a780, 0 0 10px #745734, 0 0 20px #8f6b3f, 0 0 30px #be8845, 0 0 40px #dda35b;
 }
 
 #mainTitle {
-    color: rgb(47, 103, 207);
+    color: #f06161;
+    font-weight: bold;
+    font-size: 9vw;
+    font-family: 'Pacifico', cursive;
+    text-shadow: 0 0 5px #80b6c7, 0 0 10px #346774, 0 0 20px #3f448f, 0 0 30px #45a6be, 0 0 40px #5ba9dd, 0 0 55px #197092, 0 0 75px #0a2935;
 }
 
-#nextPage {
-    color: rgb(47, 103, 207);
+#subTitle {
+    font-family: 'Cambria', 'Cochin', Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
 }
+
+ .nextPage  {
+    color: #fff;
+} 
 
 .btn {
-    background-color: rgb(47, 103, 207);
+    background-color: #e65655;
+}
+
+.btn:hover {
+    background-color: #55bde6;
 }
