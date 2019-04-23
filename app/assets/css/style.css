@@ -14,7 +14,9 @@ h2, h3, h4, footer {
     text-shadow: 0 0 5px #c7a780, 0 0 10px #745734, 0 0 20px #8f6b3f, 0 0 30px #be8845, 0 0 40px #dda35b;
 }
 
-
+h2 {
+    font-size: 30px;
+}
 h3 {
     padding-top: 20px;
 }
@@ -50,17 +52,15 @@ footer {
 }
 
 
-
-/*---Main--*/
 img {
     width: 200px;
     height: 300px !important;
   }
-.overlay img {
-    width: 350px;
-    height: 260px;
-  }
 
+#match-img {
+    width: 200px !important;
+    height: 300px !important;
+}
 
 
 
