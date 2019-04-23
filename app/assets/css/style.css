@@ -62,6 +62,13 @@ img {
     height: 300px !important;
 }
 
+.modal-dialog, .modal-body, .modal-header, .modal-footer  {
+    background: url(../images/matched_background.png) no-repeat center center fixed;
+}
+
+#match-name {
+    color: #0b0b42;
+}
 
 
 /*

@@ -27,7 +27,7 @@
   <div class="container">
 
     <div class="text-center">
-      <h1 id="mainTitle"><i class="fa fa-users"></i>Friend Finder</h1>
+      <h1 id="mainTitle"><i class="fa fa-users"></i> Friend Finder</h1>
       <hr>
       <h3 id="subTitle">Answer a few basic questions. </h3>
       <h3 id="subTitle">Then get matched with the greatest compatible celebrity!</h3>
@@ -102,7 +102,7 @@
 
     $.get("/api/friends", function (data) {
       //console.log(data.length)
-      for (var i = 0; i < data.length; i++) {
+      for (var i = 0; i < 27; i++) {
         var photo = data[i].photo;
         //console.log(data[i])
         //console.log(photo)
