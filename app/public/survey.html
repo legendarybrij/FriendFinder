@@ -205,7 +205,7 @@
                    // diff[i].scores[10]+=Math.abs(data[i].scores[j]-array[j]); 
                     totalScore[i]+=parseFloat(Math.abs(data[i].scores[j]-array[j])); 
                 }
-                console.log(totalScore[i]);
+               // console.log(totalScore[i]);
             }
             for(let i=0;i<totalScore.length;i++)
             {
@@ -219,7 +219,7 @@
                     compatibleUserIndex.push(i);
                 }
             }
-            console.log("Least Value = "+leastValue);
+           // console.log("Least Value = "+leastValue);
             if(compatibleUserIndex.length===1)
             {
               $("#match-name").text(data[compatibleUserIndex[0]].name);
