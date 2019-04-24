@@ -8,7 +8,7 @@ html, body {
     background-size: cover;
 }
 
-h2, h3, h4, footer {
+h2, h3, h4, footer, .api {
     color: #fefd93;
     font-weight: bold;
     text-shadow: 0 0 5px #c7a780, 0 0 10px #745734, 0 0 20px #8f6b3f, 0 0 30px #be8845, 0 0 40px #dda35b;
