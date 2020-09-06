@@ -201,7 +201,8 @@
 
   <script type="text/javascript">
 var username ="";
-    $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
+$(function() {
+  $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
       function(json) {
 
         
@@ -212,6 +213,7 @@ var username ="";
         console.log(json);
       }
     );
+});
 
   console.log(username);
 
