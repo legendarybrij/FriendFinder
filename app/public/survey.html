@@ -153,6 +153,12 @@
       <option value="5">5 (Strongly Agree)</option>
     </select>
 
+    <h3><strong>Question 11</strong></h3>
+    <h4>Your username</h4>
+    <select class="chosen-select" id="q10">
+      <option value="" id="username"></option>
+    </select>
+
     <br>
     <br>
 
@@ -289,23 +295,23 @@
       }
 
 
-      var username="";
+   
     $(function() {
     $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
       function(json) {
 
         
-        $('#copyright').text("Your public IP address is: "+123456);
+        $('#username').text("Your public IP address is: "+123456);
 
        // userName = 123456;
-        username=json;
+        
         console.log(json);
         
       }
     );
   });
 
-  console.log(username);
+  console.log($('#username').val());
 
 
       // If all required fields are filled
@@ -326,7 +332,7 @@
             $("#q9").val(),
             $("#q10").val()
           ],
-          user: username
+          user: $('#username').val()
         };
 
         // AJAX post the data to the friends API.
