@@ -289,8 +289,8 @@
       }
 
 
-      var userName;
-      $(function() {
+      
+      var userName = $(function() {
     $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
       function(json) {
 
@@ -300,6 +300,7 @@
        // userName = 123456;
         
         console.log(json);
+        return "Your public IP address is: "+123456;
       }
     );
   });
@@ -324,7 +325,7 @@
             $("#q9").val(),
             $("#q10").val()
           ],
-          user: $('#copyright').text()
+          user: $('#copyright').val()
         };
 
         // AJAX post the data to the friends API.
