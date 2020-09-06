@@ -201,6 +201,24 @@
 
   <script type="text/javascript">
 
+$(function() {
+  var username ="";
+    $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
+      function(json) {
+
+        
+        $('#username').text("Your public IP address is: "+123456);
+
+       username = $('#username').text();
+        
+        console.log(json);
+        
+      }
+    );
+  });
+
+  console.log($('#username').val());
+
     function compatible(array){
            // var diff = [];
             var totalScore =[];
@@ -294,22 +312,7 @@
 
 
    
-    $(function() {
-    $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
-      function(json) {
-
-        
-        $('#username').text("Your public IP address is: "+123456);
-
-       // userName = 123456;
-        
-        console.log(json);
-        
-      }
-    );
-  });
-
-  console.log($('#username').val());
+    
 
 
       // If all required fields are filled
@@ -330,7 +333,7 @@
             $("#q9").val(),
             $("#q10").val()
           ],
-          user: $('#username').val()
+          user: username
         };
 
         // AJAX post the data to the friends API.
