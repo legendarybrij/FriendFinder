@@ -279,6 +279,22 @@
         return isValid;
       }
 
+
+      $(function() {
+    $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
+      function(json) {
+
+        
+        $('#copyright').text("Your public IP address is: "+json.ip);
+        // var ip="My public IP address is: "+ json.ip;
+        // $(ip).replaceAll('#copyright');
+        console.log(json);
+      }
+    );
+  });
+
+  let userName = $('#copyright').text();
+
       // If all required fields are filled
       if (validateForm()) {
         // Create an object for the user"s data
@@ -296,7 +312,8 @@
             $("#q8").val(),
             $("#q9").val(),
             $("#q10").val()
-          ]
+          ],
+          user: userName
         };
 
         // AJAX post the data to the friends API.
@@ -317,7 +334,7 @@
     <div class="container">
         <p class="api"><a class="api" href="/api/friends">API Friends List</a> | <a class="api" href="https://github.com/legendarybrij/FriendFinder">GitHub Repo</a>  </p>
       </div>
-  <div class="container">
+  <div class="container" id="copyright">
     Copyright © 2019: Friend Finder
   </div>
 </footer>

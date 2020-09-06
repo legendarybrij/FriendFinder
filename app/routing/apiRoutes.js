@@ -6,7 +6,7 @@
 
 var friendsData = require("../data/friends");
 
-
+let users =[];
 // ===============================================================================
 // ROUTING
 // ===============================================================================
@@ -35,6 +35,8 @@ module.exports = function(app) {
     // It will do this by sending out the value "true" have a table
     // req.body is available since we're using the body parsing middleware
       friendsData.push(req.body);
+      users.push(req.body.user);
+      console.log(req.body.user +" user: "+ user[0]);
       res.json(true);
 
   });
