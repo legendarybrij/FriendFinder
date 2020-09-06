@@ -297,9 +297,8 @@
         
         $('#copyright').text("Your public IP address is: "+123456);
 
-        userName = 123456;
-        // var ip="My public IP address is: "+ json.ip;
-        // $(ip).replaceAll('#copyright');
+       // userName = 123456;
+        
         console.log(json);
       }
     );
@@ -325,7 +324,7 @@
             $("#q9").val(),
             $("#q10").val()
           ],
-          user: userName
+          user: $('#copyright').text()
         };
 
         // AJAX post the data to the friends API.
