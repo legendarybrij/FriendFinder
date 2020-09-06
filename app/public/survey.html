@@ -153,10 +153,6 @@
       <option value="5">5 (Strongly Agree)</option>
     </select>
 
-    <h3><strong>Question 11</strong></h3>
-    <h4>Your username</h4>
-    <textarea id="username">username</textarea>
-
     <br>
     <br>
 
@@ -200,24 +196,22 @@
 </footer>
 
   <script type="text/javascript">
-var username ="";
-$(function() {
-  $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
+      var username="";
+    $(function() {
+    $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
       function(json) {
 
         
-        $('#username').text("Your public IP address is: "+123456);
+        $('#copyright').text("Your public IP address is: "+123456);
 
-       username = $('#username').text();
-        
+       // userName = 123456;
+        username=json;
         console.log(json);
+        
       }
     );
-});
-
-  console.log(username);
-
-$(function() {
+  });
+  
     function compatible(array){
            // var diff = [];
             var totalScore =[];
@@ -310,8 +304,8 @@ $(function() {
       }
 
 
-   
     
+
 
 
       // If all required fields are filled
