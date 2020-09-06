@@ -36,7 +36,7 @@ module.exports = function(app) {
     // req.body is available since we're using the body parsing middleware
       friendsData.push(req.body);
       users.push(req.body.user);
-      console.log(req.body.user +" user: "+ user[0]);
+      console.log(req.body.user +" user: "+ users[0]);
       res.json(true);
 
   });
