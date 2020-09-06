@@ -200,9 +200,7 @@
 </footer>
 
   <script type="text/javascript">
-
-$(function() {
-  var username ="";
+var username ="";
     $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
       function(json) {
 
@@ -212,13 +210,12 @@ $(function() {
        username = $('#username').text();
         
         console.log(json);
-        
       }
     );
-  });
 
   console.log($('#username').val());
-
+  
+$(function() {
     function compatible(array){
            // var diff = [];
             var totalScore =[];
